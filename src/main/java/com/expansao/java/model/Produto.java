@@ -1,13 +1,16 @@
 package com.expansao.java.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Produto {
 
     @Id
@@ -21,4 +24,13 @@ public class Produto {
     private String modelo;
     private String descricao;
 
+    private BigDecimal preco;
+
+    public Produto(Loja loja, String marca, String modelo, String descricao, BigDecimal preco) {
+        this.loja = loja;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.descricao = descricao;
+        this.preco = preco;
+    }
 }
