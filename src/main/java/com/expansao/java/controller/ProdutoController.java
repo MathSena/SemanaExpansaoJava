@@ -35,7 +35,7 @@ public class ProdutoController {
         }
     }
 
-    @PutMapping("/{id")
+    @PutMapping("/{id}")
     public ResponseEntity editarProduto(@RequestBody ProdutoDto produto,@PathVariable long id){
         try {
             produtoService.editarProduto(produto, id);
@@ -45,7 +45,7 @@ public class ProdutoController {
         }
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity removeProduto(@PathVariable long id){
         try {
             produtoService.deletarProduto(id);

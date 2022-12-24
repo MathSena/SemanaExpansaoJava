@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class LojaService {
 
-    @Autowired
+    @Autowired(required=true)
     private LojaRepository lojaRepository;
 
 
